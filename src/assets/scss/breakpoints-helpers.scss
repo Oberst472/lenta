@@ -1,0 +1,33 @@
+.dev {
+    &:before {
+        font-family: $family--default;
+        content: 'xs';
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 30px;
+        color: white;
+        font-weight: 700;
+        border-radius: 10px;
+        background-color: #1634ff;
+        text-transform: uppercase;
+        pointer-events: none;
+        @include sm() {
+            content: 'sm';
+            background-color: #ff2133;
+        }
+        @include md() {
+            content: 'md';
+            background-color: #15ff9e;
+        }
+        @include lg() {
+            content: 'lg';
+            background-color: #b97dff;
+        }
+    }
+}

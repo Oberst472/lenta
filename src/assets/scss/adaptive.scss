@@ -1,0 +1,49 @@
+@mixin sm {
+    @media screen and (min-width: map-get(map-get($mobile, 'breakpoints'), 'sm')) {
+        @content
+    }
+}
+@mixin md {
+    @media screen and (min-width: map-get(map-get($mobile, 'breakpoints'), 'md')) {
+        @content
+    }
+}
+@mixin lg {
+    @media screen and (min-width: map-get(map-get($mobile, 'breakpoints'), 'lg')) {
+        @content
+    }
+}
+
+@mixin container {
+    margin: 0 auto;
+    @include sm {
+        max-width: map-get(map-get($mobile, 'container'), 'sm');
+    }
+    @include md {
+        max-width: map-get(map-get($mobile, 'container'), 'md');
+    }
+    @include lg {
+        max-width: map-get(map-get($mobile, 'container'), 'lg');
+    }
+}
+//миксин для адаптивного шрифта
+@mixin adaptiveFont($f-min, $f-max, $fallback: false) {
+    $w-min: map-get(map-get($mobile, 'breakpoints'), 'sm');
+    $w-max: map-get(map-get($mobile, 'breakpoints'), 'lg');
+    $k: ($f-max - $f-min)/($w-max - $w-min);
+    $b: $f-min - $k * $w-min;
+
+    font-size: $f-min;
+
+    @media (min-width: $w-min) {
+        @if ($fallback) {
+            font-size: $fallback;
+        }
+        font-size: calc( #{$k} * 100vw + #{$b} );
+
+    }
+
+    @media (min-width: $w-max) {
+        font-size: $f-max;
+    }
+}
