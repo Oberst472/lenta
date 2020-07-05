@@ -13,7 +13,7 @@ export const BREAKPOINTS = {
     }
 }
 
-export function media (breakpointName, _direction) {
+export function media(breakpointName, _direction) {
     const windowWidth = window.innerWidth
     const breakpointConfig = BREAKPOINTS[breakpointName]
     const direction = _direction ? _direction : breakpointConfig.direction

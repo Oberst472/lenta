@@ -85,10 +85,10 @@ module.exports = {
             }
         ],
 
-        "space-before-function-paren": ["error", {
-            "anonymous": "never",
-            "named": "never",
-            "asyncArrow": "always"
+        'space-before-function-paren': ['error', {
+            anonymous: 'never',
+            named: 'never',
+            asyncArrow: 'always'
         }],
         'no-eval': ['error'],
         'no-caller': ['error'],
