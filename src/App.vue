@@ -10,7 +10,8 @@
             :info="item"
             v-for="item in info"
             :key="item.id"
-            @mouseenter.native="toggleActiveItem(item.id)" @mouseleave.native="clearActiveItem"
+            @toggleActiveItem="toggleActiveItem"
+            @clearActiveItem="clearActiveItem"
         />
     </div>
 </template>

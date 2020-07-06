@@ -1,6 +1,6 @@
 <template>
     <span class="ui-marker">
-        <button class="ui-marker__btn">
+        <button class="ui-marker__btn" @mouseenter="$emit('toggleActiveItem', info.id)" @mouseleave="$emit('clearActiveItem')">
             <span class="ui-marker__btn-btn"></span>
             <span class="ui-marker__btn-decor"></span>
         </button>
