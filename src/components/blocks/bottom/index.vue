@@ -128,6 +128,7 @@
             }
 
             &:hover {
+                transform: scale(1.1);
                 .block-bottom__btn-img--hover {
                     opacity: 1;
                 }
@@ -169,5 +170,8 @@
                 text-transform: uppercase;
             }
         }
+    }
+    .block-bottom__arrow {
+        pointer-events: none;
     }
 </style>

@@ -3,7 +3,8 @@
         <BlockTop class="main__top"/>
         <BlockImg class="main__img" :active="activeItem" @ent="toggleActiveItem" @leave="clearActiveItem"/>
         <BlockTitle class="main__title"/>
-        <BlockBottom class="main__bottom" :active="activeItem" @ent="toggleActiveItem" @leave="clearActiveItem"/>
+        <!--        <BlockBottom class="main__bottom" :active="activeItem" @ent="toggleActiveItem" @leave="clearActiveItem"/>-->
+        <BlockBottom class="main__bottom"/>
         <UiMarker
             class="block-marker"
             :class="[`block-marker--${item.id}`, {'ui-marker--active': +activeItem === item.id}]"
@@ -30,7 +31,7 @@ export default {
   },
     data() {
         return {
-            activeItem: '',
+            activeItem: 2,
             info: [
                 {
                     id: 1,
@@ -41,8 +42,8 @@ export default {
                 },
                 {
                     id: 2,
-                    title: 'Пиво ',
-                    desc: 'светлое 0,47 л/Россия',
+                    title: 'Пиво Heinken',
+                    desc: 'светлое <br> 0,47 л/Россия',
                     text: 'купить',
                     price: [54, 89]
                 },
