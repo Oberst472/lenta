@@ -39,27 +39,27 @@
                     },
                     {
                         id: 2,
-                        title: 'Пиво'
+                        title: 'Пивной сет'
                     },
                     {
                         id: 3,
-                        title: 'Рыба'
+                        title: 'Вино/Рыба'
                     },
                     {
                         id: 4,
-                        title: 'Сосиски'
+                        title: 'Снеки'
                     },
                     {
                         id: 5,
-                        title: 'Барбекю'
+                        title: 'Мангалы'
                     },
                     {
                         id: 6,
-                        title: 'Палатка'
+                        title: 'Кемпинг'
                     },
                     {
                         id: 7,
-                        title: 'Столик'
+                        title: 'Пикник'
                     }
                 ]
             }
@@ -139,7 +139,7 @@
 
             &-img {
                 position: relative;
-                height: 77px;
+                height: 50px;
                 width: 50px;
 
                 img {
@@ -163,7 +163,7 @@
                 transition-duration: 0.3s;
                 opacity: 0;
                 font-family: $family--primary;
-                margin-top: 5px;
+                margin-top: 2px;
                 color: $color--accent;
                 font-size: 12px;
                 text-transform: uppercase;

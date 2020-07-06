@@ -1,6 +1,9 @@
 <template>
     <span class="ui-marker">
-        <button class="ui-marker__btn"></button>
+        <button class="ui-marker__btn">
+            <span class="ui-marker__btn-btn"></span>
+            <span class="ui-marker__btn-decor"></span>
+        </button>
         <span class="ui-marker__info">
             <span class="ui-marker__title">
                 {{ info.title }}
@@ -32,13 +35,12 @@
 
 <style scoped lang="scss">
     .ui-marker {
-        margin-right: 100px;
         display: inline-flex;
         position: absolute;
-        top: 200px;
         flex-direction: column-reverse;
         align-items: center;
         &--active {
+            z-index: 10;
             .ui-marker__info {
                 opacity: 1 !important;
             }
@@ -54,17 +56,40 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+            .ui-marker__btn-decor {
+                animation-play-state: paused;
+            }
         }
         &__btn {
-            background-color: #ffd600;
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
             width: 28px;
             height: 28px;
             border: 0;
             position: relative;
             bottom: -30px;
             cursor: pointer;
+            z-index: 2;
+            background-color: transparent;
+            &-btn {
+                position: absolute;
+                background-color: #ffd600;
+                box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+                border-radius: 50%;
+                width: 28px;
+                height: 28px;
+                z-index: 4;
+                left: 0;
+                top: 0;
+            }
+            &-decor {
+                position: absolute;
+                width: 68px;
+                height: 68px;
+                background-color: rgba($color--primary, 0.4);
+                border-radius: 50%;
+                top: calc(50% - 34px);
+                left: calc(50% - 34px);
+                z-index: -1;
+            }
             &:hover {
                 & ~ .ui-marker__info {
                     /*opacity: 1 !important;*/
@@ -82,6 +107,8 @@
         }
 
         &__title {
+            width: 100%;
+            box-sizing: border-box;
            transform: translateY(-10px);
             transition-duration: 0.3s;
             transition-delay: 0.2s;
@@ -99,7 +126,7 @@
         &__desc {
             font-weight: 400;
             font-size: 12px;
-            padding: 5px;
+            padding: 5px 0;
             background-color: $color--text-light;
             width: 100%;
             text-align: left;

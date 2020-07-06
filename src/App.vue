@@ -47,8 +47,8 @@ export default {
                 },
                 {
                     id: 3,
-                    title: 'Рыба Морская',
-                    desc: 'рыба свежая соленая',
+                    title: 'Вино/Рыба',
+                    desc: 'Вино/Рыба',
                     text: 'купить',
                     price: [345, 23]
                 },
@@ -133,6 +133,64 @@ export default {
     }
     .block-marker {
         z-index: 3;
-        box-shadow: 0 0 0;
+        /*box-shadow: 0 0 0;*/
+       /deep/ .ui-marker__btn-decor {
+           animation-name: keyfrScale;
+           animation-duration: 2s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+       }
+        &--1 {
+            bottom: 138px;
+            left: 33%;
+            /deep/ .ui-marker__btn-decor {
+                animation-delay: 0.5s;
+            }
+        }
+        &--2 {
+            bottom: 420px;
+            left: 59.4%;
+            /deep/ .ui-marker__btn-decor {
+                animation-delay: 0.4s;
+            }
+        }
+        &--3 {
+            bottom: 500px;
+            left: 70%;
+              /deep/ .ui-marker__btn-decor {
+                animation-delay: 1s;
+            }
+        }
+        &--4 {
+             bottom: 500px;
+             left: 88%;
+              /deep/ .ui-marker__btn-decor {
+                animation-delay: 0.3s;
+            }
+         }
+        &--5 {
+            bottom: 200px;
+            left: 5%;
+        }
+        &--6 {
+            bottom: 300px;
+            left: 35%;
+              /deep/ .ui-marker__btn-decor {
+                animation-delay: 1s;
+            }
+        }
+        &--7 {
+            bottom: 530px;
+            left: 79%;
+        }
+
+    }
+    @keyframes keyfrScale{
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0.2);
+        }
     }
 </style>
