@@ -43,6 +43,7 @@
             z-index: 10;
             .ui-marker__info {
                 opacity: 1 !important;
+                pointer-events: auto !important;
             }
             .ui-marker__title {
                 opacity: 1;
@@ -104,6 +105,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            pointer-events: none;
         }
 
         &__title {

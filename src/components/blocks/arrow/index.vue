@@ -24,6 +24,9 @@
     .block-arrow {
         display: flex;
         align-items: flex-start;
+       position: relative;
+        right: 36px;
+
 
 
         &__text {
