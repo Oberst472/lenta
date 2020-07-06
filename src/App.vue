@@ -31,7 +31,7 @@ export default {
   },
     data() {
         return {
-            activeItem: 2,
+            activeItem: '',
             info: [
                 {
                     id: 1,
@@ -87,7 +87,6 @@ export default {
     },
     methods: {
         toggleActiveItem(id) {
-            console.log(6)
             this.activeItem = id
         },
         clearActiveItem() {

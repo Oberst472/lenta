@@ -69,7 +69,6 @@
         },
         methods: {
             toggleActiveItem(id) {
-                console.log(556)
                 this.$emit('ent', id)
             },
             clearActiveItem() {
