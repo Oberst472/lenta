@@ -139,7 +139,6 @@ export default {
            animation-name: keyfrScale;
            animation-duration: 2s;
            animation-iteration-count: infinite;
-           animation-direction: alternate;
        }
         &--1 {
             bottom: 138px;
@@ -188,10 +187,11 @@ export default {
     }
     @keyframes keyfrScale{
         0% {
-            transform: scale(1);
+            transform: scale(0);
         }
         100% {
-            transform: scale(0.2);
+            transform: scale(1.4);
+            opacity: 0;
         }
     }
 </style>

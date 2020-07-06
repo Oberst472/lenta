@@ -58,7 +58,11 @@
                 transform: translateY(0);
             }
             .ui-marker__btn-decor {
+                //transform: scale(1.2) !important;
+                //opacity: 1 !important;
+                //background-color: rgba($color--primary, 0.6);
                 animation-play-state: paused;
+                //transition-duration: 0.3s !important;
             }
         }
         &__btn {
@@ -85,11 +89,12 @@
                 position: absolute;
                 width: 48px;
                 height: 48px;
-                background-color: rgba($color--primary, 0.4);
+                background-color: rgba($color--primary, 1);
                 border-radius: 50%;
                 top: calc(50% - 24px);
                 left: calc(50% - 24px);
                 z-index: -1;
+                transition-duration: 0.3s;
             }
             &:hover {
                 & ~ .ui-marker__info {
